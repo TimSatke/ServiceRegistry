@@ -9,7 +9,7 @@ process.on("uncaughtException", function(err) {
     console.error("uncaughtException: " + err)
 });
 
-class PornService {
+class PonyService {
     search(term) {
         return { msg: "hello, " + term }
     }
@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use("/", express.static("./"));
 
 const registry = new ServiceRegistry()
-registry.register('/porn', new PornService())
+registry.register('/pony', new PonyService())
 registry.serve()
 app.use(registry.router)
 
