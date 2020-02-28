@@ -1,0 +1,23 @@
+{
+    "name": "serviceregistry",
+    "version": "1.0.0",
+    "description": "Simplifies communication between server and client side JS by generating communication layer",
+    "main": "registry.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TimSatke/ServiceRegistry.git"
+    },
+    "author": "Tim Satke, Tim Haag",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TimSatke/ServiceRegistry/issues"
+    },
+    "homepage": "https://github.com/TimSatke/ServiceRegistry#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1"
+    }
+}
