@@ -11,7 +11,6 @@ process.on("uncaughtException", function(err) {
 
 class PornService {
     search(term) {
-        console.log("hello, " + term)
         return { msg: "hello, " + term }
     }
 }

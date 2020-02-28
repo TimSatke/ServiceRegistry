@@ -22,8 +22,12 @@ class ServiceRegistry {
                 const path = service.route + '/' + funcName
 
                 this.router.post(path, (req, res) => {
-                    const result = service.service[funcName](...req.body.args)
-                    res.json(result)
+                    Promise.resolve(service.service[funcName](...req.body.args))
+                        .then(result => res.json(result))
+                        .catch(err => {
+                            res.sendStatus(500)
+                            throw (err)
+                        })
                 })
             })
         })
